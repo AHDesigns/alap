@@ -6,13 +6,15 @@ const port = 8080;
 const app = express();
 const line = '\n----------------------------------------\n';
 
-app.get('/', (req, res) => {
+app.set('view engine', 'ejs');
+
+app.get('*', (req, res) => {
     console.log(
         chalk.yellow(line),
         chalk.green(`request: ${req.path}\n`),
         chalk.gray(`${JSON.stringify(req.headers, null, 2)}`)
     );
-    res.sendFile(join(__dirname, 'index.html'));
+    res.render(join(__dirname, 'index'));
 });
 
 app.listen(port, () => {
@@ -22,6 +24,10 @@ app.listen(port, () => {
         chalk.cyan(`  Now listening on port: ${port}`),
         chalk.gray(line)
     );
+
+    if (process.send) {
+        process.send('online');
+    }
 });
 
 
