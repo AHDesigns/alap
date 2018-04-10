@@ -7,6 +7,7 @@ const app = express();
 const line = '\n----------------------------------------\n';
 
 app.set('view engine', 'ejs');
+app.use('/', express.static(join(__dirname, '/assets')));
 
 app.get('*', (req, res) => {
     console.log(
