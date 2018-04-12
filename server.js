@@ -7,9 +7,10 @@ const app = express();
 const line = '\n----------------------------------------\n';
 
 app.set('view engine', 'ejs');
-app.use('/', express.static(join(__dirname, '/assets')));
 
-app.get('*', (req, res) => {
+app.use('/views', express.static(join(__dirname, '/views')));
+
+app.get('/', (req, res) => {
     console.log(
         chalk.yellow(line),
         chalk.green(`request: ${req.path}\n`),

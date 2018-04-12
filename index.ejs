@@ -12,13 +12,11 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" type="text/css" href="views/reset.css">
+        <link rel="stylesheet" type="text/css" href="views/main.css">
     </head>
     <body>
-        <header>
-            <div>Logo</div>
-            <h2>AHDesigns</h2>
-            <p>MENU</p>
-        </header>
+        <% include views/body %>
         <script src=<%= process.env.BROWSER_REFRESH_URL %>></script>
     </body>
 </html>

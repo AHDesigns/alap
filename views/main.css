@@ -1,0 +1,35 @@
+/* colors
+red       #ff5c57
+green     #5af78e
+yellow    #f3f99d
+blue      #57c7ff
+magenta   #ff6ac1
+cyan      #9aedfe
+orange    #fecc9a
+turqoise  #5af4ce
+light_v   #d69eff
+coral     #FF776E
+bg        #282A36
+fg        #f9f9f9
+ */
+
+body {
+    width: 100%;
+    font-size:13px;
+    line-height: 1.42em;
+    font-family: 'Fira Code', serif;
+    min-height: 100vh;
+    display: grid;
+    background-color: #282A36;
+    color: #f9f9f9;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    text-overflow: ellipsis;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: #ff6ac1;
+    font-size:22px;
+}
