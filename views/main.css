@@ -14,22 +14,37 @@ fg        #f9f9f9
  */
 
 body {
-    width: 100%;
-    font-size:13px;
-    line-height: 1.42em;
-    font-family: 'Fira Code', serif;
-    min-height: 100vh;
-    display: grid;
     background-color: #282A36;
     color: #f9f9f9;
-    grid-template-rows: auto 1fr auto;
+    display: grid;
+    font-family: 'Fira Code', serif;
+    font-size:13px;
     grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    line-height: 1.42em;
+    min-height: 100vh;
     text-overflow: ellipsis;
+    width: 100%;
 }
 
-header {
+.site-header {
     display: flex;
     justify-content: space-between;
-    color: #ff6ac1;
+    align-items: baseline;
+    color: #FF776E;
     font-size:22px;
+}
+
+.logo {
+    /* width: 30px; */
+    overflow: hidden;
+}
+
+.see {
+    border: thick solid red;
+}
+
+svg {
+    max-width:100%;
+    max-height:100%;
 }
